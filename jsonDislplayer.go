@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"os"
 	"reflect"
+
+	// "strconv"
 	"strings"
 )
 
@@ -63,7 +65,15 @@ func MapIntoTextString(param map[string]interface{}, space string, text string) 
 
 		} else {
 
-			text += fmt.Sprint(space+"[", index, "] : ", "[", value, "]\n")
+			// var valString interface{}
+			// intrfFloat, ok := value.(float64)
+			// if ok {
+			// 	valString, _ := strconv.ParseFloat(intrfFloat, 64)
+			// } else {
+			// 	valString := value
+			// }
+
+			text += fmt.Sprint(space+"[", index, "] : ", "[", value, "]\n") //"[", value, "]\n"
 
 		}
 
